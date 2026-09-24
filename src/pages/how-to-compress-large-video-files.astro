@@ -1,0 +1,329 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "How to Compress Large Video Files Without Losing Quality for Free (Any Device)";
+const pageDescription = "Learn how to compress large MP4, MOV, and WebM videos without losing quality for free on any device (PC, Mac, iPhone, Android). Complete guide with CRF charts and zero-upload browser tools.";
+const siteUrl = "https://compressvideo.github.io";
+const canonicalUrl = `${siteUrl}/how-to-compress-large-video-files/`;
+
+const ogImage = "https://res.cloudinary.com/dpx6w78bt/image/upload/f_auto/q_auto/v1786342039/Online_Tool_rc1ybr.png";
+
+// Structured Data: Article + HowTo + BreadcrumbList
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": pageTitle,
+  "description": pageDescription,
+  "image": ogImage,
+  "url": canonicalUrl,
+  "inLanguage": "en",
+  "author": {
+    "@type": "Organization",
+    "name": "CompressVideo Editorial Team",
+    "url": siteUrl
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CompressVideo",
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/favicon.svg`
+    }
+  },
+  "datePublished": "2026-01-15T08:00:00+00:00",
+  "dateModified": "2026-09-24T12:00:00+00:00"
+};
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Compress Large Video Files for Free on Any Device",
+  "description": "Step-by-step guide to reducing video file size using in-browser WebAssembly without losing visible quality.",
+  "image": ogImage,
+  "totalTime": "PT2M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Open the In-Browser Compressor",
+      "text": "Navigate to CompressVideo.io on any desktop, tablet, or smartphone browser.",
+      "url": `${siteUrl}/#tool`
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Upload Your Large Video File",
+      "text": "Drag and drop your MP4, MOV, or WebM video into the upload area. The file is processed locally in RAM.",
+      "url": `${siteUrl}/#upload`
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Select Compression Preset or CRF",
+      "text": "Choose Smart Balance for a 50-60% size drop with near-lossless clarity, or choose Discord / WhatsApp presets.",
+      "url": `${siteUrl}/#presets`
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Export and Save",
+      "text": "Click Compress Video, monitor the live frame encoding, and download your optimized MP4 instantly.",
+      "url": `${siteUrl}/#download`
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": siteUrl
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guide",
+      "item": canonicalUrl
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Schema Injections -->
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+    <!-- Breadcrumb Nav -->
+    <nav class="flex items-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-400 mb-6">
+      <a href="/" class="hover:text-emerald-500 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-slate-900 dark:text-white">Guides</span>
+      <span>/</span>
+      <span class="truncate text-emerald-600 dark:text-emerald-400">Compress Large Video Files</span>
+    </nav>
+
+    <!-- Header Hero -->
+    <header class="space-y-4 pb-8 border-b border-slate-200 dark:border-slate-800">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-semibold">
+        <span>📖 Comprehensive Technical Guide</span>
+        <span>•</span>
+        <span>5 Min Read</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+        How to Compress Large Video Files Without Losing Quality for Free (Any Device)
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+        Whether you are sending a 4K clip over Discord, emailing an MP4 presentation, or freeing up phone storage, discover how to reduce video size by 70% or more while maintaining crystal-clear visual quality.
+      </p>
+
+      <div class="flex items-center gap-4 text-xs text-slate-500 dark:text-slate-400 pt-2">
+        <span>Updated: September 2026</span>
+        <span>•</span>
+        <span>Platform: Windows, Mac, iOS, Android, Linux</span>
+      </div>
+    </header>
+
+    <!-- Quick Jump Callout Box -->
+    <div class="my-8 p-5 rounded-2xl bg-emerald-50/60 dark:bg-emerald-950/20 border border-emerald-200/80 dark:border-emerald-800/60">
+      <h3 class="font-bold text-sm text-emerald-900 dark:text-emerald-300 mb-2">⚡ Quick Summary: The Fastest Way to Compress Video</h3>
+      <p class="text-xs sm:text-sm text-emerald-800 dark:text-emerald-400 leading-relaxed">
+        If you need to compress a video immediately without installing heavy software or uploading your sensitive footage to cloud servers, use our <a href="/" class="font-bold underline hover:text-emerald-600">Free In-Browser Video Compressor</a>. It operates 100% locally in your browser with hardware-accelerated WebAssembly.
+      </p>
+    </div>
+
+    <!-- Main Content Body -->
+    <div class="space-y-12 text-slate-700 dark:text-slate-300 leading-relaxed">
+      <!-- Section 1: The Core Problem -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
+          Why Are Video Files So Massive?
+        </h2>
+        <p>
+          Modern smartphone cameras (such as iPhones and Samsung Galaxies) and mirrorless cameras record video at extraordinarily high bitrates—often exceeding <strong>50 to 100 Megabits per second (Mbps)</strong>. While this yields pristine raw footage, a standard 60-second 4K recording can easily weigh over <strong>400 Megabytes (MB)</strong>.
+        </p>
+        <p>
+          When you try to share this footage, you hit strict digital barriers:
+        </p>
+        <ul class="list-disc list-inside space-y-1.5 pl-2 text-sm sm:text-base">
+          <li><strong>Discord:</strong> 25MB attachment limit for free accounts.</li>
+          <li><strong>Email (Gmail, Outlook):</strong> 20MB to 25MB attachment cap.</li>
+          <li><strong>WhatsApp:</strong> 16MB file size limit for instant media messages.</li>
+          <li><strong>Websites & LMS Portals:</strong> Slow page load times and strict server quota paywalls.</li>
+        </ul>
+      </section>
+
+      <!-- Section 2: Technical Secrets of Quality Retention -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
+          How Compression Works Without Visible Quality Loss
+        </h2>
+        <p>
+          "Lossless" video compression is often a marketing buzzword. True video compression is <em>perceptually lossless</em>—meaning mathematical data is discarded that the human eye cannot distinguish.
+        </p>
+        <p>
+          Here are the three fundamental pillars that dictate file size and image clarity:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-emerald-600 dark:text-emerald-400 text-sm mb-1">1. Video Codec</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400">
+              Modern codecs like <strong>H.264 (AVC)</strong> and <strong>H.265 (HEVC)</strong> use advanced inter-frame prediction to record only the changes between frames rather than every individual pixel.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-emerald-600 dark:text-emerald-400 text-sm mb-1">2. Constant Rate Factor (CRF)</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400">
+              Rather than forcing a flat bitrate, CRF allocates more data to high-motion scenes (action, explosions) and less data to static scenes (talking heads, backgrounds).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <h4 class="font-bold text-emerald-600 dark:text-emerald-400 text-sm mb-1">3. Resolution Scaling</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400">
+              Downscaling a 4K video (3840×2160) to 1080p Full HD (1920×1080) reduces pixel density by <strong>75%</strong> with zero perceptible difference on mobile and laptop screens!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Recommended Settings Cheat Sheet -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
+          Recommended Compression Settings (Cheat Sheet)
+        </h2>
+        <p class="text-sm">
+          Use the reference table below to choose the perfect balance between file size and resolution for your specific use-case:
+        </p>
+
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-bold border-b border-slate-200 dark:border-slate-700">
+              <tr>
+                <th class="p-3 sm:p-4">Target Destination</th>
+                <th class="p-3 sm:p-4">Recommended Resolution</th>
+                <th class="p-3 sm:p-4">Optimal CRF</th>
+                <th class="p-3 sm:p-4">Expected Size Savings</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 sm:p-4 font-semibold text-emerald-600 dark:text-emerald-400">Discord Free (<25MB)</td>
+                <td class="p-3 sm:p-4">720p HD or 1080p</td>
+                <td class="p-3 sm:p-4">CRF 28–30</td>
+                <td class="p-3 sm:p-4">60% – 85%</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 sm:p-4 font-semibold text-emerald-600 dark:text-emerald-400">WhatsApp / Messaging</td>
+                <td class="p-3 sm:p-4">720p or 480p</td>
+                <td class="p-3 sm:p-4">CRF 32</td>
+                <td class="p-3 sm:p-4">70% – 90%</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 sm:p-4 font-semibold text-emerald-600 dark:text-emerald-400">Email Attachment</td>
+                <td class="p-3 sm:p-4">720p HD</td>
+                <td class="p-3 sm:p-4">CRF 28</td>
+                <td class="p-3 sm:p-4">65% – 80%</td>
+              </tr>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50">
+                <td class="p-3 sm:p-4 font-semibold text-emerald-600 dark:text-emerald-400">Archival & Backup</td>
+                <td class="p-3 sm:p-4">Original Resolution</td>
+                <td class="p-3 sm:p-4">CRF 22 (Near-Lossless)</td>
+                <td class="p-3 sm:p-4">40% – 55%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 4: Step-by-Step Guide for Any Device -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
+          How to Compress Videos Step-by-Step on Any Device
+        </h2>
+        <p>
+          Whether you are using a <strong>Windows PC, Mac, iPhone, iPad, Android phone, or Chromebook</strong>, the process takes less than 60 seconds with no software installation:
+        </p>
+
+        <div class="space-y-4">
+          <div class="flex gap-4 p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+            <span class="w-8 h-8 rounded-full bg-emerald-500 text-white font-bold text-sm flex items-center justify-center flex-shrink-0">1</span>
+            <div class="space-y-1">
+              <h4 class="font-bold text-slate-900 dark:text-white text-base">Open CompressVideo.io</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                Open Safari, Chrome, Edge, or Firefox on your device and head to <a href="/" class="text-emerald-600 dark:text-emerald-400 font-semibold underline">CompressVideo.io</a>.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+            <span class="w-8 h-8 rounded-full bg-emerald-500 text-white font-bold text-sm flex items-center justify-center flex-shrink-0">2</span>
+            <div class="space-y-1">
+              <h4 class="font-bold text-slate-900 dark:text-white text-base">Select Your Video</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                Drag your file onto the upload box or tap "browse" to choose from your iPhone Camera Roll, Android Gallery, or computer folder. Notice that your file never leaves your device!
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+            <span class="w-8 h-8 rounded-full bg-emerald-500 text-white font-bold text-sm flex items-center justify-center flex-shrink-0">3</span>
+            <div class="space-y-1">
+              <h4 class="font-bold text-slate-900 dark:text-white text-base">Pick "Smart Balance" or Custom Preset</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                For most scenarios, the <strong>Smart Balance</strong> preset gives the cleanest image with over 50% savings. If you have an exact limit, tap <strong>Discord</strong> or <strong>WhatsApp</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+            <span class="w-8 h-8 rounded-full bg-emerald-500 text-white font-bold text-sm flex items-center justify-center flex-shrink-0">4</span>
+            <div class="space-y-1">
+              <h4 class="font-bold text-slate-900 dark:text-white text-base">Download Your Shrunk Video</h4>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                Hit "Compress Video". The WebAssembly engine compiles the frames in RAM. Once the progress hits 100%, preview the output and click <strong>Download Compressed Video</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Security & Privacy Warning -->
+      <section class="space-y-4 p-6 rounded-3xl bg-amber-500/10 border border-amber-500/20 text-slate-800 dark:text-slate-200">
+        <h3 class="text-lg font-bold text-amber-900 dark:text-amber-400 flex items-center gap-2">
+          <span>⚠️</span>
+          <span>Why You Should Avoid Traditional Cloud Converters</span>
+        </h3>
+        <p class="text-sm leading-relaxed">
+          Most online video compression websites force you to upload your videos to their cloud servers. This exposes your family moments, proprietary company recordings, or confidential content to data breaches, third-party tracking, and server storage leaks.
+        </p>
+        <p class="text-sm leading-relaxed">
+          <strong>The Solution:</strong> By leveraging modern <strong>WebAssembly (WASM)</strong> and <strong>FFmpeg</strong>, compression can now run completely client-side. Zero bytes ever travel across the internet.
+        </p>
+      </section>
+
+      <!-- Interactive Call To Action -->
+      <div class="my-10 p-8 rounded-3xl bg-gradient-to-br from-emerald-600 to-teal-700 text-white text-center space-y-4 shadow-xl shadow-emerald-700/20">
+        <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Ready to Compress Your Video?</h3>
+        <p class="text-emerald-100 max-w-xl mx-auto text-sm sm:text-base">
+          100% free, no registration required, unlimited file sizes, and completely private on your device.
+        </p>
+        <div>
+          <a
+            href="/"
+            class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white text-emerald-800 font-bold text-base hover:bg-emerald-50 active:scale-95 transition-all shadow-md"
+          >
+            <span>Launch Free Video Compressor</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>

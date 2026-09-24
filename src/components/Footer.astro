@@ -1,0 +1,68 @@
+---
+import { languages, type LanguageKey } from '../i18n/ui';
+import { useTranslations, getLocalizedPath } from '../i18n/utils';
+
+interface Props {
+  lang: LanguageKey;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<footer class="mt-28 border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm transition-colors py-12 px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="space-y-1 text-center md:text-left">
+      <div class="flex items-center justify-center md:justify-start gap-2">
+        <span class="font-bold text-slate-900 dark:text-white">CompressVideo</span>
+        <span class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">100% Private</span>
+      </div>
+      <p class="text-xs text-slate-500 dark:text-slate-400">
+        {t('footer.tagline')}
+      </p>
+    </div>
+
+    <!-- Language Links & Educational Guide -->
+    <div class="flex flex-col sm:flex-row items-center gap-3 text-xs text-slate-500 dark:text-slate-400">
+      <a
+        href="/how-to-compress-large-video-files/"
+        class="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
+      >
+        <span>📖</span>
+        <span>Compression Guide</span>
+      </a>
+      <span class="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
+      <div class="flex flex-wrap items-center justify-center gap-2.5">
+        {
+          Object.entries(languages).map(([code, name]) => (
+            <a
+              href={getLocalizedPath(code as LanguageKey)}
+              class={`hover:text-emerald-500 transition-colors ${
+                code === lang ? 'font-bold text-emerald-600 dark:text-emerald-400' : ''
+              }`}
+            >
+              {name}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Buy Me A Coffee & Built With -->
+    <div class="flex items-center gap-4 text-xs">
+      <a
+        href="https://buymeacoffee.com/kisharadilz"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-500/10 text-amber-700 dark:text-amber-400 hover:bg-amber-500/20 font-medium transition-colors"
+      >
+        <span>☕</span>
+        <span>{t('footer.support')}</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-slate-100 dark:border-slate-800/60 text-center text-[11px] text-slate-400">
+    <p>© {new Date().getFullYear()} CompressVideo. {t('footer.builtWith')}</p>
+  </div>
+</footer>

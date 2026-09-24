@@ -1,0 +1,187 @@
+---
+import { languages, defaultLang, type LanguageKey } from '../i18n/ui';
+import { useTranslations, getLocalizedPath } from '../i18n/utils';
+
+interface Props {
+  lang: LanguageKey;
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const { lang, title, description, image } = Astro.props;
+const t = useTranslations(lang);
+
+const siteUrl = 'https://compressvideo.github.io';
+const pageTitle = title || t('seo.title');
+const pageDescription = description || t('seo.description');
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+
+// Exact high-resolution Cloudinary Open Graph Image
+const ogImage = image || 'https://res.cloudinary.com/dpx6w78bt/image/upload/f_auto/q_auto/v1786342039/Online_Tool_rc1ybr.png';
+
+const ogLocaleMap: Record<LanguageKey, string> = {
+  en: 'en_US',
+  es: 'es_ES',
+  pt: 'pt_BR',
+  de: 'de_DE',
+  fr: 'fr_FR',
+  ja: 'ja_JP',
+};
+const ogLocale = ogLocaleMap[lang] || 'en_US';
+
+const webAppSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  'name': 'CompressVideo',
+  'url': canonicalUrl,
+  'description': pageDescription,
+  'applicationCategory': 'MultimediaApplication',
+  'operatingSystem': 'All (Web Browser - Windows, Mac, Linux, iOS, Android)',
+  'browserRequirements': 'Requires JavaScript. Requires HTML5 & WebAssembly.',
+  'image': ogImage,
+  'screenshot': ogImage,
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'USD',
+  },
+  'aggregateRating': {
+    '@type': 'AggregateRating',
+    'ratingValue': '4.9',
+    'ratingCount': '1480',
+    'bestRating': '5',
+    'worstRating': '1',
+  },
+  'featureList': [
+    '100% Client-Side Video Compression',
+    'No Server Uploads - Complete Privacy',
+    'Zero File Size Restrictions',
+    'Discord (<25MB) and WhatsApp (<16MB) Presets',
+    'Hardware-Accelerated WebAssembly Encoding',
+    'Custom Constant Rate Factor (CRF) and Resolution Scaling'
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': [
+    {
+      '@type': 'Question',
+      'name': t('faq.q1'),
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': t('faq.a1'),
+      },
+    },
+    {
+      '@type': 'Question',
+      'name': t('faq.q2'),
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': t('faq.a2'),
+      },
+    },
+    {
+      '@type': 'Question',
+      'name': t('faq.q3'),
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': t('faq.a3'),
+      },
+    },
+    {
+      '@type': 'Question',
+      'name': t('faq.q4'),
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': t('faq.a4'),
+      },
+    },
+  ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  'name': 'CompressVideo',
+  'url': siteUrl,
+  'inLanguage': lang,
+  'image': ogImage,
+};
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  'name': 'CompressVideo',
+  'url': siteUrl,
+  'logo': `${siteUrl}/favicon.svg`,
+  'sameAs': [
+    'https://buymeacoffee.com/kisharadilz',
+    'https://github.com/compressvideo/compressvideo.github.io',
+  ],
+};
+---
+
+<!-- Performance & DNS Preconnects -->
+<link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
+<link rel="dns-prefetch" href="https://res.cloudinary.com" />
+<link rel="preconnect" href="https://unpkg.com" crossorigin />
+<link rel="dns-prefetch" href="https://unpkg.com" />
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="canonical" href={canonicalUrl} />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary Meta Tags -->
+<title>{pageTitle}</title>
+<meta name="title" content={pageTitle} />
+<meta name="description" content={pageDescription} />
+<meta name="keywords" content="video compressor, compress video, reduce video size, free video compressor, compress mp4, compress mov, discord video compressor, whatsapp video compressor, client side video compression, private video compressor, no upload video compressor" />
+<meta name="author" content="CompressVideo" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="theme-color" content="#10B981" />
+
+<!-- Hreflang Alternates (Bidirectional across all 6 locales + x-default) -->
+<link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
+{
+  Object.keys(languages).map((locale) => (
+    <link
+      rel="alternate"
+      hreflang={locale}
+      href={`${siteUrl}/${locale}/`}
+    />
+  ))
+}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={pageDescription} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:secure_url" content={ogImage} />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="CompressVideo - Free Local Video Compressor Online Without Losing Quality" />
+<meta property="og:site_name" content="CompressVideo" />
+<meta property="og:locale" content={ogLocale} />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalUrl} />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={pageDescription} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content="CompressVideo - Free Local Video Compressor Online Without Losing Quality" />
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(webAppSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />

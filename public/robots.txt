@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://compressvideo.github.io/sitemap.xml

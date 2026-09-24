@@ -1,0 +1,41 @@
+{
+  "name": "compressvideo.github.io",
+  "version": "1.0.0",
+  "description": "100% client-side, zero-server video compressor in the browser",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/compressvideo/compressvideo.github.io.git"
+  },
+  "keywords": [
+    "video-compressor",
+    "wasm",
+    "ffmpeg",
+    "astro",
+    "client-side",
+    "privacy-first"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@astrojs/react": "^7.0.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "astro": "^7.3.5",
+    "canvas-confetti": "^1.9.4",
+    "lucide-react": "^1.48.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tailwindcss": "^3.4.19"
+  }
+}

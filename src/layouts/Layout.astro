@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SEOHead from '../components/SEOHead.astro';
+import { defaultLang, type LanguageKey } from '../i18n/ui';
+
+interface Props {
+  lang?: LanguageKey;
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const { lang = defaultLang, title, description, image } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <SEOHead lang={lang} title={title} description={description} image={image} />
+
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-RMPJ514HX2"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-RMPJ514HX2');
+    </script>
+
+    <!-- GitHub Pages COOP/COEP Workaround for WebAssembly -->
+    <script is:inline src="/coi-serviceworker.js"></script>
+
+    <!-- Theme Detection Script (Blocking to prevent FOUC) -->
+    <script is:inline>
+      (function() {
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased selection:bg-emerald-500 selection:text-white transition-colors duration-200">
+    <Header lang={lang} />
+    <main class="flex-1 w-full">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>

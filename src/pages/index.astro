@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Compressor from '../components/Compressor';
+import SEOContent from '../components/SEOContent.astro';
+import { useTranslations } from '../i18n/utils';
+
+const lang = 'en';
+const t = useTranslations(lang);
+---
+
+<Layout lang={lang}>
+  <!-- Hero Section -->
+  <div class="relative pt-12 pb-8 sm:pt-16 sm:pb-12 px-4 sm:px-6 max-w-5xl mx-auto text-center space-y-5">
+    <!-- Privacy Badge -->
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-400 text-xs sm:text-sm font-semibold tracking-wide shadow-sm">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span>{t('hero.badge')}</span>
+    </div>
+
+    <!-- Title & Subtitle -->
+    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-tight max-w-4xl mx-auto">
+      {t('hero.title')}{' '}
+      <span class="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">
+        {t('hero.titleHighlight')}
+      </span>
+    </h1>
+
+    <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+      {t('hero.subtitle')}
+    </p>
+  </div>
+
+  <!-- Interactive Compressor Island -->
+  <section class="px-4 sm:px-6">
+    <Compressor client:load lang={lang} />
+  </section>
+
+  <!-- Rich Semantic SEO Content -->
+  <SEOContent lang={lang} />
+</Layout>
