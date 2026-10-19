@@ -4,7 +4,7 @@
 > Shrink large MP4, MOV, and WebM videos without losing quality. No uploads, zero privacy risk, unlimited file sizes, and 100% free forever.
 
 [![Live Site](https://img.shields.io/badge/Live_Site-compressvideo.github.io-10B981?style=for-the-badge&logo=googlechrome&logoColor=white)](https://compressvideo.github.io/)
-[![Buy Me A Coffee](https://img.shields.io/badge/Support_Developer-Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/kisharadilz)
+[![Ko-fi](https://img.shields.io/badge/Support_Developer-Ko--fi-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white)](https://ko-fi.com/kishara)
 [![Astro](https://img.shields.io/badge/Built_With-Astro_5-FF5D01?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build/)
 [![WebAssembly](https://img.shields.io/badge/Engine-FFmpeg_WebAssembly-654FF0?style=for-the-badge&logo=webassembly&logoColor=white)](https://ffmpeg.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
@@ -154,7 +154,7 @@ This repository is pre-configured with zero-config GitHub Actions deployment:
 
 If you find this free, privacy-first video compression tool useful, please consider supporting the project:
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Kishara-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/kisharadilz)
+[![Ko-fi](https://img.shields.io/badge/Support_on_Ko--fi-kishara-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white)](https://ko-fi.com/kishara)
 
 ---
 
